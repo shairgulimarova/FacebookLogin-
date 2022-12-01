@@ -1,0 +1,102 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+*, *::before,
+*::after{
+  box-sizing: border-box; 
+}
+body{
+  background-color: #eff2f6;
+}
+
+.container{
+  max-width: 1100px;
+  margin:0 auto; 
+  align-items: center;
+  margin-top: 100px;
+}
+.container_items{
+  display: flex;
+  justify-content: center;
+}
+.container_left{
+  max-width: 400px;
+  font-size: 1.8em;  
+  margin-right: 100px; 
+}
+.container_right{
+  width:400px; 
+  background-color: #ffff;
+  padding:20px; 
+  border-radius: 5px;
+  box-shadow: 0 0 10px grey;
+}
+
+form{
+  display:flex; 
+  flex-direction: column; 
+  
+}
+input{
+  padding: 15px 10px; 
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: solid 1px #eceaea; 
+  color: black; 
+  font-size: 1em;
+}
+
+
+.btn{
+  background-color: #1877f2;
+  color:#ffff;
+  font-size: 1.3em;
+  border:none;
+  border-radius: 5px; 
+  padding:15px 10px; 
+}
+
+.newAccaunt{
+    width: 200px; 
+    background-color: #42b72a;
+    border-radius: 5px;
+    padding: 15px 10px; 
+    text-decoration: none;
+    color:#ffff;
+    margin: 0 0 10px 80px;
+    text-align: center;
+}
+
+.passwordForgotton{
+  text-decoration: none;
+  color:#1877f2;
+  margin: 15px 0 25px 125px
+}
+
+
+img{
+  padding:0; 
+  margin: 30px 0 -50px -28px; 
+}
+
+.error-msg{
+  display:none; 
+  margin-bottom: 50px;
+  color: red; 
+}
+.error-msg.show{
+  display: block; 
+}
+
+input.error{
+  border-color: 1px solid red;
+}
+input[type='email']:valid, input[type='password']:valid{
+  border-color: 1px solid green; 
+}
+
+
+
+

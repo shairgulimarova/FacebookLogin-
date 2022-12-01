@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class='container'>
+    <div class='container_items'>
+      <div class='container_left'>
+        <img src='images/fblogo.svg' width='300'>
+        <p>Facebook помогает вам всегда оставаться на связи и общаться со своими знакомыми.</p>
+      </div>
+      <!--     right side -->
+
+      <div class='container_right'>
+        <form class='form' novalidate>
+          <input class='emailPhone' type="email" placeholder="Электронный адрес или номер телефона" required>
+          <p class='error-msg'>Веденный вами электронный адрес или номер мобильного телефона не связан ни с одним аккаунтом. Найдите свой аккаунт и войдите в систему.</p>
+          <input class='password' type='password' placeholder="Пароль" required>
+          <p class='error-msg'>Вы ввели неверный пароль.</p>
+          <button class="btn">Вход</button>
+          <a class='passwordForgotton' href=''>Забыли пароль?</a>
+
+          <a class='newAccaunt' href=''>Создать новый аккаунт</a>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+</body>
+
+</html>
