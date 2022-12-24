@@ -1,8 +1,21 @@
 const form = document.querySelector('.form');
 const emailPhone = document.querySelector('.emailPhone');
+console.log(emailPhone)
 const password = document.querySelector(".password");
 const btn = document.querySelector('.btn');
-const container = document.querySelector('.container')
+const container = document.querySelector('.container');
+
+const accountForget = document.querySelector('.accountForget');
+const firstSection = document.querySelector(".entranceSection");
+const secondSection = document.querySelector('.searchAccauntSection');
+const cancel = document.querySelector('.cancel');
+const search = document.querySelector('.search');
+const emailPhoneThird = document.querySelector('.thirdInput')
+const fillInEmail = document.querySelector('.fillInEmail');
+const thirdSection = document.querySelector('.createAccauntSection');
+const newAccaunt = document.querySelector('.newAccaunt');
+const x = document.querySelector('.x');
+const registerMe = document.querySelector('.registerMe');
 
 emailPhone.addEventListener('input', function() {
   if (emailPhone.validity.valid) {
@@ -33,8 +46,6 @@ function getApiData() {
     })
 }
 
-
-
 btn.addEventListener('click', function(event) {
   event.preventDefault();
   if (!emailPhone.validity.valid) {
@@ -48,7 +59,51 @@ btn.addEventListener('click', function(event) {
   } else {
     getApiData();
   }
+})
 
-
+accountForget.addEventListener('click', function(event) {
+  event.preventDefault()
+  firstSection.style.display = 'none';
+  secondSection.style.display = 'block';
 
 })
+
+cancel.addEventListener('click', function(event) {
+  event.preventDefault();
+  secondSection.style.display = 'none';
+  firstSection.style.display = 'block';
+});
+
+search.addEventListener('click', function(event) {
+  event.preventDefault();
+  if (!emailPhoneThird.validity.valid) {
+    fillInEmail.style.display = 'block'
+  } else {
+    getApiData();
+  }
+});
+
+newAccaunt.addEventListener('click', function(event) {
+  event.preventDefault();
+  createAccauntSection.style.display = 'block';
+  firstSection.style.opacity = '0.2';
+  createAccauntSection.classList.add('active');
+})
+
+x.addEventListener('click', function() {
+  createAccauntSection.style.display = 'none';
+  firstSection.style.opacity = '10';
+})
+
+  .registerMe.addEventListener('click', function(event) {
+    event.preventDefault();
+    firstSection.style.display = 'none';
+    secondSection.style.display = 'none';
+    thirdSection.style.display = 'none';
+    container.innerHTML = `<h1>Happy Back End</h1>`
+    container.style.color = '#1877f2';
+  }); 
+
+
+
+
