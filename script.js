@@ -85,9 +85,9 @@ search.addEventListener('click', function(event) {
 
 newAccaunt.addEventListener('click', function(event) {
   event.preventDefault();
-  createAccauntSection.style.display = 'block';
+  thirdSection.style.display = 'block';
   firstSection.style.opacity = '0.2';
-  createAccauntSection.classList.add('active');
+  thirdSection.classList.add('active');
 })
 
 x.addEventListener('click', function() {
@@ -95,7 +95,7 @@ x.addEventListener('click', function() {
   firstSection.style.opacity = '10';
 })
 
-  .registerMe.addEventListener('click', function(event) {
+  registerMe.addEventListener('click', function(event) {
     event.preventDefault();
     firstSection.style.display = 'none';
     secondSection.style.display = 'none';
